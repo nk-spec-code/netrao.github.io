@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Netra | Cybersecurity Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0b0c;
+      color: #eaeaea;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s, transform 0.2s;
+    }
+    nav a:hover { 
+      color: #4ade80; 
+      transform: translateY(-2px);
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 120px 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      position: relative;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h1 {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #b3b3b3;
+      max-width: 700px;
+      font-size: 18px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 8px 0;
+      color: #b3b3b3;
+    }
+    .accent { color: #4ade80; }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      perspective: 1000px;
+    }
+    .tech-stack img {
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      transform: translateY(30px) rotateX(0deg);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      filter: drop-shadow(0 0 5px #4ade80);
+    }
+    .tech-stack img.visible {
+      opacity: 1;
+      transform: translateY(0) rotateX(360deg);
+    }
+    .tech-stack img:hover {
+      transform: scale(1.2) rotateX(0deg);
+      filter: drop-shadow(0 0 15px #4ade80);
+    }
+    footer {
+      padding: 40px;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div>Netra</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#interests">Interests</a>
+    <a href="#pursuing">Currently Pursuing</a>
+    <a href="#skills">Skills</a>
+    <a href="#goals">2026 Goals</a>
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+  </div>
+</nav>
+
+<section id="home">
+  <h1>Cybersecurity student<br><span class="accent">curious by default.</span></h1>
+  <p>
+    I’m Netra — a cybersecurity student at Carleton University.
+    I like understanding how modern systems fail, how attackers think,
+    and how automation can make security scale.
+  </p>
+</section>
+
+<section id="interests">
+  <h2>What I’m Interested In</h2>
+  <p>
+    Cloud security, threat detection, and automation are my main playgrounds.
+  </p>
+  <p>
+    I enjoy tracing attacker behavior, hunting small misconfigurations, and
+    building guardrails that prevent incidents before they happen.
+  </p>
+</section>
+
+<section id="pursuing">
+  <h2>What I’m Working On Right Now</h2>
+  <p>
+    Strengthening fundamentals in cloud infrastructure, networking, and security operations.
+  </p>
+  <p>
+    Hands-on projects, experimenting with AWS, practicing threat analysis, and
+    learning how real security teams operate in the field.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Tools</h2>
+  <p>I work with these tools and languages daily:</p>
+  
+  <div class="tech-stack">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" alt="Bash" title="Bash">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/aws/aws-original.svg" alt="AWS" title="AWS">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/splunk/splunk-original.svg" alt="Splunk" title="Splunk">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu" title="Ubuntu">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kali/kali-original.svg" alt="Kali Linux" title="Kali Linux">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" title="Windows">
+  </div>
+</section>
+
+<section id="goals">
+  <h2>2026 Goals</h2>
+  <p>
+    By 2026, my goal is to be a strong early-career cybersecurity professional
+    with real-world experience in cloud and security operations.
+  </p>
+  <ul>
+    <li>Deepen expertise in cloud security and detection engineering</li>
+    <li>Build production-quality security and automation projects</li>
+    <li>Contribute to security research or open-source tooling</li>
+    <li>Secure impactful internships or co-op roles in the security space</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Netra
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const techImages = document.querySelectorAll('.tech-stack img');
+
+  function animateOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if(sectionTop < triggerBottom) {
+        section.classList.add('visible');
+      }
+    });
+
+    techImages.forEach((img, index) => {
+      const imgTop = img.getBoundingClientRect().top;
+      if(imgTop < triggerBottom) {
+        setTimeout(() => img.classList.add('visible'), index * 150);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>
