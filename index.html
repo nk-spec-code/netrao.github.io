@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Netra | Cybersecurity</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netra | Cybersecurity Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Poppins&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <style>
 body {
-  margin: 0;
-  font-family: 'IBM Plex Mono', monospace;
-  background: #fff;
-  scroll-behavior: smooth;
+  margin:0;
+  font-family:'IBM Plex Mono', monospace;
+  background:#fff;
+  scroll-behavior:smooth;
 }
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  z-index: 100;
-  border-bottom: 1px solid #ddd;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  padding:15px 0;
+  z-index:100;
+  border-bottom:1px solid #ddd;
 }
-nav ul { display: flex; list-style: none; padding: 0; margin:0; }
-nav li { margin: 0 15px; }
-nav a {
-  text-decoration: none;
-  color: #555;
-  font-weight: 600;
-  transition: all 0.2s;
-}
-nav a:hover { color: #0ea5e9; font-style: italic; text-decoration: underline; text-underline-offset: 3px; }
+nav ul { display:flex; list-style:none; padding:0; margin:0; }
+nav li { margin:0 15px; }
+nav a { text-decoration:none; color:#555; font-weight:600; font-size:16px; transition:all 0.2s;}
+nav a:hover { color:#0ea5e9; font-style:italic; text-decoration:underline; text-underline-offset:3px;}
 
 section {
-  min-height: 100vh;
-  padding: 160px 20px 40px;
-  text-align: center;
+  min-height:100vh;
+  padding:160px 20px 40px;
+  text-align:center;
 }
-h1, h2 { margin: 20px 0; opacity: 0; }
-p { font-size: 1rem; color: #444; max-width: 700px; margin: 10px auto; opacity: 0; }
-.typewriter { display: inline-block; overflow: hidden; white-space: nowrap; border-right: 3px solid #0ea5e9; animation: typing 2.5s steps(30,end), blink .7s step-end infinite; }
-@keyframes typing { from {width:0;} to {width:100%;} }
-@keyframes blink { 50% { border-color: transparent; } }
+h1,h2 { margin:20px 0; font-weight:800; }
+h1 { font-size:5rem; }
+h2 { font-size:3.5rem; }
+p { font-size:1.7rem; color:#444; max-width:800px; margin:10px auto; }
 
-.tech-stack { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-top:30px; opacity:0; }
-.tech-stack img { width:60px; height:60px; transition: transform 0.4s; }
-.tech-stack img:hover { transform: scale(1.3) rotate(10deg); }
+ul.points { list-style:none; padding-left:0; font-size:1.7rem; }
+ul.points li { margin:20px 0; }
+
+.tech-container, .projects-container { display:flex; justify-content:center; flex-wrap:wrap; gap:80px; margin-top:50px; }
+.tech-container div, .projects-container div { text-align:center; font-size:1.8rem; }
+.tech-container img, .projects-container img { width:150px; height:150px; margin-top:20px; transition:transform 0.3s; }
+.tech-container img:hover, .projects-container img:hover { transform:scale(1.2); }
 
 #home { background:#e0f2fe; }
-#interests { background:#bae6fd; }
-#pursuing { background:#bfdbfe; }
-#skills { background:#93c5fd; }
+#focus { background:#bae6fd; }
+#tech { background:#bfdbfe; }
+#projects { background:#93c5fd; }
+#connect { background:#60a5fa; color:#fff; }
+
+button.connect-btn {
+  padding:15px 25px;
+  margin:15px;
+  font-size:1.2rem;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+button.connect-btn:hover { transform:scale(1.1); }
+
+footer { padding:40px; font-size:1.3rem; color:#444; background:#e0f2fe; }
 
 </style>
 </head>
@@ -60,47 +72,78 @@ p { font-size: 1rem; color: #444; max-width: 700px; margin: 10px auto; opacity: 
 
 <nav>
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#interests">Interests</a></li>
-  <li><a href="#pursuing">Right Now</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="https://github.com/nk-spec-code" target="_blank">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/in/netra-kan-a2372a318/" target="_blank">LinkedIn</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#focus">Current Focus</a></li>
+<li><a href="#tech">Top Technologies</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#connect">Connect</a></li>
 </ul>
 </nav>
 
 <section id="home">
-  <h1 class="typewriter">Hey! I'm <span style="color:#0ea5e9">Netra</span></h1>
-  <p data-aos="fade-up">First-year Cybersecurity student at Carleton University.<br>I enjoy understanding systems, thinking like an attacker, and automating security.</p>
+<h1 data-aos="fade-down">Hi 👋 I'm Netra</h1>
+<p data-aos="fade-up">
+Cybersecurity student with a strong interest in computer science and defensive security.<br>
+I focus on understanding how systems, networks, and applications fail and how to secure them with strong fundamentals and hands-on practice.
+</p>
 </section>
 
-<section id="interests">
-  <h2 class="typewriter" data-aos="fade-right">My Cybersecurity Interests</h2>
-  <p data-aos="fade-up">Cloud Security (AWS), Threat Detection, SIEM, Security Automation</p>
+<section id="focus">
+<h2 data-aos="fade-down">🚀 Current Focus</h2>
+<ul class="points" data-aos="fade-up">
+<li>Networking fundamentals & protocol-level security</li>
+<li>Operating systems & Linux internals</li>
+<li>Blue team: detection, logging, incident response</li>
+<li>Security-focused programming with Python</li>
+</ul>
 </section>
 
-<section id="pursuing">
-  <h2 class="typewriter" data-aos="fade-right">Right Now</h2>
-  <p data-aos="fade-up">Hands-on projects in AWS cloud platforms, simulations, and certifications (CompTIA Sec+).<br>Learning networking, OS, and software engineering foundations.</p>
-</section>
-
-<section id="skills">
-  <h2 class="typewriter" data-aos="fade-right">Skills & Tools</h2>
-  <div class="tech-stack" data-aos="fade-up">
+<section id="tech">
+<h2 data-aos="fade-down">👨‍💻 Top Technologies</h2>
+<div class="tech-container">
+  <div data-aos="zoom-in">Python<br>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/splunk/splunk-original.svg" alt="Splunk">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kali/kali-original.svg" alt="Kali Linux">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows">
   </div>
+  <div data-aos="zoom-in">Bash<br>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash">
+  </div>
+  <div data-aos="zoom-in">AWS<br>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS">
+  </div>
+  <div data-aos="zoom-in">Splunk<br>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/splunk/splunk-original.svg" alt="Splunk">
+  </div>
+  <div data-aos="zoom-in">Linux<br>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+  </div>
+  <div data-aos="zoom-in">CCNA Networking<br>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg" alt="CCNA">
+  </div>
+</div>
 </section>
+
+<section id="projects">
+<h2 data-aos="fade-down">📌 Projects & Practice</h2>
+<ul class="points" data-aos="fade-up">
+<li>Security Labs – hands-on practice with networking, Linux, and defensive security concepts</li>
+<li>Python Security Scripts – automation for log parsing, scanning, and analysis</li>
+<li>CTF Practice – building foundational skills in exploitation and defense</li>
+</ul>
+</section>
+
+<section id="connect">
+<h2 data-aos="fade-down">🔗 Connect With Me</h2>
+<button class="connect-btn" onclick="window.open('https://github.com/nk-spec-code','_blank')">GitHub</button>
+<button class="connect-btn" onclick="window.open('https://www.linkedin.com/in/netra-kan-a2372a318/','_blank')">LinkedIn</button>
+</section>
+
+<footer>
+Thanks for stopping by! Always learning, always improving. Open to security internships, labs, and collaboration opportunities.
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({ duration:1000, once:true });
 </script>
-
 </body>
 </html>
